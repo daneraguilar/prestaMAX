@@ -1,0 +1,76 @@
+<ion-side-menus enable-menu-with-back-views="false"  >
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar menul2 ">
+      <ion-nav-back-button style="color: white;">
+
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon  ion-navicon-round menul" menu-toggle="left ">
+        </button>
+             </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent">
+    
+    </ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar menul">
+      <h1 class="title menul">Menu</h1>
+    </ion-header-bar>
+    <ion-content class="menul ">
+      <ion-list >
+   
+        <ion-item menu-close href="#/app/clientes" class="item item-icon-left">
+          Clientes
+             <i class="icon ion-person-stalker"></i>
+          
+        </ion-item>
+     
+        <ion-item menu-close href="#/app/prestamos" class="item item-icon-left" >
+               Prestamos
+            <i class="icon ion-card"></i>
+        </ion-item>
+       
+        <ion-item menu-close href="#/app/abonos" class="item item-icon-left">
+          Abonos
+          <i class="icon ion-cash"></i>
+        </ion-item>
+            <ion-item menu-close href="#/app/empleados" ng-show="admin" class="item item-icon-left">
+         Empleados
+          <i class="icon ion-ios-people-outline"></i>
+        </ion-item>
+             <ion-item menu-close href="#/app/finanzas" ng-show="admin" class="item item-icon-left">
+          Finanzas
+            <i class="icon ion-social-usd"></i>
+        </ion-item  >
+
+         <ion-item menu-close class="item item-icon-left" href="#/app/configuracion">
+           Configuracion
+          <i class="icon ion-gear-a"></i>
+         </ion-item>
+           <ion-item menu-close ng-click="login()" class="item item-icon-left" >
+          Salir
+            <i class="icon ion-power"></i>
+        </ion-item>
+    
+
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+ <ion-tabs class="tabs-dark  tabs-striped tabs-color-stable ">
+     <ion-tab title="Title" href="" icon="ion-ios-list-outline" >
+   
+     </ion-tab>
+      <ion-tab title="Title" href="" icon="ion-ios-home" >
+   
+       
+     </ion-tab>
+      <ion-tab title="Title" href="" icon="ion-social-usd" >
+       
+     </ion-tab>
+   </ion-tabs>
+
+
