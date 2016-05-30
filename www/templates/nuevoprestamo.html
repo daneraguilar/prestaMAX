@@ -2,12 +2,39 @@
   <ion-content>
   <form action="">
  <div class="list">
-   <label class="item item-input ">
-    <span class="input-label">Cedula</span>
-    <input type="number" placeholder="40875565" required="">
+     <label class="item item-input ">
+    <span class="input-label"> Cliente</span>
+    <input type="text" placeholder="carlos" required="" min="0" disabled="">
+  </label>
+
+     <label class="item item-input ">
+    <span class="input-label">Cantidad</span>
+    <input type="number" placeholder="1200000" required="" min="0">
+  </label>
+    <label class="item item-input ">
+    <span class="input-label">Ganacia</span>
+    <input type="number" placeholder="200000" required="" min="0" max="10">
+  </label>
+    <label class="item item-input ">
+    <span class="input-label">Cuota</span>
+    <input type="number" placeholder="100000" required="">
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      empleado
+    </div>
+    <select>
+      <option ng-repeat="e in empleados" value="{{e.Name}}" >{{e.Name}}</option>
+   
+    </select>
+  </label>
+  <label class="item item-textarea ">
+    <span class="input-label">Descripcion</span>
+    <input type="text" placeholder="descripcion" required="">
   </label>
 
   <button class="button verde button-block " type="submit">Registrar</button>
+ 
 
 </div>
 </form>

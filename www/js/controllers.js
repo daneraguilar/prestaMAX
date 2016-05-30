@@ -95,11 +95,17 @@ $scope.l="daner";
 }])
 .controller('registrarempleado',['$scope','$http', function($scope,$http) {
 $scope.RE=function(){
-  alert(this.cedula);
+  
+
 }
 }])
 .controller('registrarcliente', function($scope, $stateParams) {
 })
-.controller('nuevoprestamo', function($scope, $stateParams) {
+.controller('nuevoprestamo', function($scope, $stateParams,$http) {
+      $http.get('http://www.w3schools.com/angular/customers.php').then(
+      function(response){
+        $scope.empleados=response.data.records;
+      });
+
 })
 
