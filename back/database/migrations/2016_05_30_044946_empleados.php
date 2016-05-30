@@ -20,8 +20,7 @@ class Empleados extends Migration
             $table->string('apellidos');
             $table->string('email')->unique();
             $table->string('celular');
-            $table->integer('celular');
-            $table->string('direcion');
+            $table->string('direccion');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')
             ->onDelete('cascade');

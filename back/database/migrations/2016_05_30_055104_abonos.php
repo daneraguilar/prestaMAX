@@ -20,6 +20,8 @@ class Abonos extends Migration
             $table->foreign('prestamo_id')->references('id')->on('prestamos');
             $table->integer('autor');
             $table->timestamps();
+
+    });
     }
 
     /**
@@ -31,4 +33,5 @@ class Abonos extends Migration
     {
         //
     }
+
 }
