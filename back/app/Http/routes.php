@@ -16,4 +16,7 @@ Route::get('/', function () {
 });
 Route::group(['prefix' => 'API'], function() {
 	Route::post('/nuevoCliente','cliente@crearcliente');
+	//trae todos los clientes
+	Route::get('/clientes','cliente@allclientes');
+
 });

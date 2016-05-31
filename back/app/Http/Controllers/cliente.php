@@ -5,9 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\User;
 
 class cliente extends Controller
+
+
+
 {
+
+
+	public function allclientes(){
+
+		$users= User::all();
+		return $users;
+	}
     //
 
      public function crearcliente(Request $cliente){
