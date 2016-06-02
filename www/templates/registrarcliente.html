@@ -1,46 +1,46 @@
 <ion-view view-title="Registro Cliente">
   <ion-content>
-  <form action="">
+  <form ng-submit="crear()">
  <div class="list">
    <label class="item item-input ">
     <span class="input-label">Cedula</span>
-    <input type="number" placeholder="40875565" required="">
+    <input type="number" placeholder="40875565" required="" ng-model="cliente.cedula">
   </label>
   <label class="item item-input ">
     <span class="input-label">Nombres</span>
-    <input type="text" placeholder="John" required="">
+    <input type="text" placeholder="John" required="" ng-model="cliente.nombres" minlength="4">
   </label>
   <label class="item item-input ">
     <span class="input-label">Apellidos</span>
-    <input type="text" placeholder="smith" required="">
+    <input type="text" placeholder="smith" required="" ng-model="cliente.apellidos" minlength="4">
   </label>
   <label class="item item-input ">
-    <span class="input-label">Correo</span>
-    <input type="email" placeholder="john@hotmai.com" required="">
+    <span class="input-label" >Correo</span>
+    <input type="email" placeholder="john@hotmai.com" required="" ng-model="cliente.email">
   </label>
     <label class="item item-input ">
     <span class="input-label">Celular</span>
-    <input type="number" placeholder="300876798" required="">
+    <input type="number" placeholder="300876798" required="" ng-model="cliente.celular">
   </label>
     <label class="item item-input ">
-    <span class="input-label">Direcion</span>
-    <input type="text" placeholder="cr 14 #12-27" required="">
+    <span class="input-label">Direccion</span>
+    <input type="text" placeholder="cr 14 #12-27" required="" ng-model="cliente.direccion">
   </label>
     <label class="item item-input ">
     <span class="input-label">Barrio</span>
-    <input type="text" placeholder="Garupal" required="">
+    <input type="text" placeholder="Garupal" required="" ng-model="cliente.barrio">
   </label>
     <label class="item item-input ">
     <span class="input-label">Zona</span>
-    <input type="text" placeholder="Centro" >
+    <input type="text" placeholder="Centro" ng-model="cliente.zona" >
   </label>
     <label class="item item-input ">
     <span class="input-label">Usuario</span>
-    <input type="text" placeholder="Centro" >
+    <input type="text" placeholder="usuario"  value="{{cliente.email}}" disabled="" >
   </label>
     <label class="item item-input ">
     <span class="input-label">Contraseña</span>
-    <input type="text" placeholder="Centro" >
+    <input type="password" placeholder="*********" ng-model="cliente.password">
   </label>
   <button class="button verde button-block " type="submit">Registrar</button>
 

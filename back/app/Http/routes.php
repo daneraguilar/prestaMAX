@@ -13,6 +13,11 @@
 
 Route::get('/', function () {
     return view('welcome');
+
+});
+Route::post('/', function () {
+    return true;
+    
 });
 Route::group(['prefix' => 'API'], function() {
 	Route::post('/nuevoCliente','cliente@crearcliente');

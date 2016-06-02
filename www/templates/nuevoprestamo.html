@@ -4,7 +4,7 @@
  <div class="list">
      <label class="item item-input ">
     <span class="input-label"> Cliente</span>
-    <input type="text" placeholder="carlos" required="" min="0" disabled="">
+    <input type="text" placeholder="carlos" required="" min="0" disabled="" ng-model="cedula">
   </label>
 
      <label class="item item-input ">
@@ -13,11 +13,11 @@
   </label>
     <label class="item item-input ">
     <span class="input-label">Ganacia</span>
-    <input type="number" placeholder="200000" required="" min="0" max="10">
+    <input type="number" placeholder="200000" required="" min="0" >
   </label>
     <label class="item item-input ">
     <span class="input-label">Cuota</span>
-    <input type="number" placeholder="100000" required="">
+    <input type="number" placeholder="100000" required="" min="0" >
   </label>
   <label class="item item-input item-select">
     <div class="input-label">
@@ -25,6 +25,7 @@
     </div>
     <select>
       <option ng-repeat="e in empleados" value="{{e.Name}}" >{{e.Name}}</option>
+      
    
     </select>
   </label>

@@ -58,6 +58,7 @@ $scope.admin=true;
         $scope.clientes=response.data.records;
       });
 
+
   }
 
   
@@ -99,13 +100,34 @@ $scope.RE=function(){
 
 }
 }])
-.controller('registrarcliente', function($scope, $stateParams) {
+.controller('registrarcliente', function($scope, $stateParams,$http) {
+            
+            $scope.crear =function(cliente){
+  $http.post('http://localhost:8000',cliente).then(
+    function(response){
+      alert(response.data);
+    },function(err){
+alert(err.data);
+  });
+
+
+}
+
 })
 .controller('nuevoprestamo', function($scope, $stateParams,$http) {
       $http.get('http://www.w3schools.com/angular/customers.php').then(
       function(response){
         $scope.empleados=response.data.records;
       });
+      $scope.cliente={}
+$scope.crear =function(){
+  $http.post('http://localhost:8000/API//nuevoCliente').then(
+    function(response){
+      alert(response);
 
+  });
+
+
+}
 })
 
